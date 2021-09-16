@@ -1,0 +1,89 @@
+@use '../../../assets/scss/' as *;
+
+ul li {
+  list-style-type: none;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 5.9vw;
+  background-color: color(light);
+  box-shadow: 0 0 5px #8f8f8f;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  &__logo {
+    background-image: url("../../../assets/images/aerops_logo.png");
+    background-size: cover;
+    width: 200px;
+    height: 60px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__link {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    &_items {
+      margin: 0.5rem;
+      color: color(dark);
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        color: color(primary);
+      }
+
+      &-active {
+        color: color(primary) !important;
+      }
+    }
+
+    @include for_size(phone) {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      height: 100vh;
+      flex-direction: column;
+      background-color: color(light);
+      width: 70%;
+      justify-content: space-evenly;
+      align-items: center;
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+
+  &__menu_icon {
+    background-color: color(light);
+    transition: all 0.3s ease-in;
+    display: none;
+
+    @include for_size(phone) {
+      display: block;
+    }
+  }
+}
+
+.toggle_nav {
+  transform: translateX(0);
+  box-shadow: -50px 0px 100px 54px rgb(0 0 0 / 60%);
+}
+
+.icon_position {
+  position: absolute;
+  right: 72%;
+}

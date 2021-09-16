@@ -1,0 +1,154 @@
+@use '../../assets/scss/' as *;
+
+.contact {
+  &__header {
+    text-align: center;
+    @include fluid-font(
+      $min_width,
+      $max_width,
+      $min_title_font,
+      $max_title_font
+    );
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &__flex {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &_title {
+      @include fluid-font(
+        $min_width,
+        $max_width,
+        $min_title_font,
+        $max_title_font
+      );
+      font-weight: 600;
+      text-transform: capitalize;
+      font-family: $chivo;
+    }
+
+    &_subtitle {
+      font-size: 24px;
+      margin-top: 0.5rem;
+    }
+
+    &_map {
+      position: relative;
+      padding: 50px 5.9vw;
+      flex: 1 0 50%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url("../../assets/images/contact_us.jpg");
+      background-size: cover;
+      color: color(light);
+
+      @include for_size(phone) {
+        flex: 1 0 100%;
+      }
+
+      &_info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include for_size(phone) {
+          all: unset;
+        }
+
+        &_section {
+          text-align: center;
+
+          &:not(:last-child) {
+            margin-bottom: 1rem;
+          }
+
+          &_icon {
+            @include fluid-font(
+              $min_width,
+              $max_width,
+              $min_hero_title,
+              $max_hero_title
+            );
+          }
+
+          &_text {
+            font-size: 20px;
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+
+    &_form {
+      padding: 50px 5.9vw;
+      position: relative;
+      flex: 1 0 50%;
+      background-color: color(light);
+
+      @include for_size(phone) {
+        flex: 1 0 100%;
+      }
+
+      .contact__form {
+        padding: 2.5rem 0;
+        margin: 0 auto;
+
+        &_btn {
+          display: flex;
+          align-items: center;
+          background-color: color(secondary);
+          border: 0;
+          color: color(light);
+          padding: 0.5rem 1.5rem;
+          margin-top: 0.5rem;
+          margin-left: auto;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &_text {
+            font-weight: bold;
+            margin-right: 8px;
+            font-size: 16px;
+          }
+
+          &-icon {
+            font-size: 20px;
+            transition: all 0.3s ease-in;
+          }
+
+          &:hover .contact__form_btn-icon {
+            transform: translateX(4px);
+          }
+        }
+      }
+
+      &__success_message {
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-weight: 600;
+        color: color(light);
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        text-transform: capitalize;
+        background-color: color(dark);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+
+        span:first-child {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+}
+
+.disabled_btn {
+  background-color: #989797 !important;
+  pointer-events: none;
+}

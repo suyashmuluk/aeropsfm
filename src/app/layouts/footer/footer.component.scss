@@ -1,0 +1,120 @@
+@use '../../../assets/scss/' as *;
+
+ul li {
+  list-style-type: none;
+}
+
+.footer {
+  background-color: color(dark);
+  color: color(light);
+  padding: 2rem 5.9vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 24px;
+
+  &__title {
+    font-family: $chivo;
+    @include fluid-font(
+      $min_width,
+      $max_width,
+      $max_regular_font,
+      $xl_regular_font
+    );
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  &__media {
+    margin-top: 1rem;
+
+    a {
+      font-size: 1.5rem;
+      color: darkgrey;
+      transition: 0.3s all ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: color(light);
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    display: inline-flex;
+    font-family: $chivo;
+    @include fluid_font(
+      $min_width,
+      $max_width,
+      $min_footer_header,
+      $max_footer_header
+    );
+    margin-bottom: 1rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: color(light);
+    }
+  }
+
+  &__link {
+    margin: 0;
+    padding: 0;
+
+    &_items {
+      display: inline-flex;
+      margin: 0.5rem 0;
+      color: color(light);
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        cursor: pointer;
+        color: color(primary);
+      }
+    }
+  }
+
+  &__contact {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &_info,
+    &_info_link {
+      margin-left: 8px;
+    }
+
+    &_info_link {
+      a {
+        color: color(light);
+
+        &:hover {
+          color: color(primary);
+        }
+      }
+    }
+  }
+}
+
+.info {
+  background-color: color(dark);
+  color: color(light);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

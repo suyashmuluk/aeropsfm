@@ -1,0 +1,66 @@
+@use '../../assets/scss/' as *;
+
+.page__header {
+  margin-bottom: 0;
+}
+
+.about {
+  padding: 0 5.9vw 50px;
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &_image {
+      flex: 1 0 50%;
+
+      img {
+        width: 100%;
+      }
+
+      @include for_size(phone) {
+        flex: 1 0 100%;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &_info {
+      flex: 1 0 50%;
+      @include fluid-font(
+        $min_width,
+        $max_width,
+        $max_regular_font,
+        $xl_regular_font
+      );
+      line-height: 24px;
+
+      @include for_size(phone) {
+        flex: 1 0 100%;
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    @include fluid-font(
+      $min_width,
+      $max_width,
+      $min_title_font,
+      $max_title_font
+    );
+    font-weight: 600;
+    margin: 50px 0 1rem;
+  }
+
+  &__info {
+    text-align: center;
+    @include fluid-font(
+      $min_width,
+      $max_width,
+      $max_regular_font,
+      $xl_regular_font
+    );
+    line-height: 24px;
+  }
+}

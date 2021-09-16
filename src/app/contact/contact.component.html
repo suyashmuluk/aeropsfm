@@ -1,0 +1,82 @@
+<div class="main_content_position">
+    <div class="page__header">
+        <div class="page__header_title">
+            Contact Us
+        </div>
+        <div class="page__header_link">
+            <span class="page__header_link_text" routerLink="/home">Home</span>
+            <span class="material-icons page__header_link-icon">chevron_right</span>
+            <span class="page__header_link_text">Contact</span>
+        </div>
+    </div>
+</div>
+<div class="contact">
+    <div class="contact__header">
+        Got questions or queries? Feel free to ask us
+    </div>
+    <div class="contact__flex">
+        <div class="contact__flex_map">
+            <div class="contact__flex_title">Have a project in mind?</div>
+            <div class="contact__flex_subtitle">Get in touch with us</div>
+            <div class="contact__flex_map_info">
+                <div class="contact__flex_map_info_section">
+                    <span class="material-icons contact__flex_map_info_section_icon">mail</span>
+                    <div class="contact__flex_map_info_section_text">
+                        info@aeropsfm.com
+                    </div>
+                </div>
+                <div class="contact__flex_map_info_section">
+                    <span class="material-icons contact__flex_map_info_section_icon">call</span>
+                    <div class="contact__flex_map_info_section_text">
+                        +91 8888369888
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact__flex_form">
+            <div class="contact__flex_title">Send Us A Message</div>
+            <form method="POST" [formGroup]="contact_form" class="contact__form">
+                <div>
+                    <mat-form-field style="width: 100%">
+                        <mat-label>Name</mat-label>
+                        <input type="text" matInput formControlName="name">
+                        <mat-error>Please enter your name</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field style="width: 100%">
+                        <mat-label>Email</mat-label>
+                        <input type="text" matInput formControlName="email">
+                        <mat-error>Please enter your email</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field style="width: 100%">
+                        <mat-label>Mobile Number</mat-label>
+                        <ngx-mat-intl-tel-input [preferredCountries]="['in']" [enablePlaceholder]="true"
+                            [enableSearch]="true" name="phone" formControlName="mobile">
+                        </ngx-mat-intl-tel-input>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field style="width: 100%">
+                        <mat-label>Comment/Feedback</mat-label>
+                        <textarea matInput formControlName="feedback"></textarea>
+                        <mat-error>Please give feedback</mat-error>
+                    </mat-form-field>
+                </div>
+                <button class="contact__form_btn" (click)="submitForm()" [disabled]="loader"
+                    [ngClass]="loader ? 'disabled_btn' : ''">
+                    <span class="contact__form_btn_text">{{loader ? 'Sending..' : 'Send'}}</span>
+                    <span class="material-icons contact__form_btn-icon" *ngIf="!loader">send</span>
+                </button>
+            </form>
+            <div class="contact__flex_form__success_message" *ngIf="success_message">
+                <span class="material-icons">
+                    check_circle
+                </span>
+                <span>We got your feedback. And it mean so much to us</span>
+            </div>
+        </div>
+    </div>
+</div>
