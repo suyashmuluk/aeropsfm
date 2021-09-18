@@ -49,14 +49,14 @@
       }
 
       &_info {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
 
-        @include for_size(phone) {
-          all: unset;
-        }
+        // @include for_size(phone) {
+        //   all: unset;
+        // }
 
         &_section {
           text-align: center;

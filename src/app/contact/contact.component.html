@@ -33,7 +33,7 @@
                 </div>
             </div>
         </div>
-        <div class="contact__flex_form">
+        <!-- <div class="contact__flex_form">
             <div class="contact__flex_title">Send Us A Message</div>
             <form method="POST" [formGroup]="contact_form" class="contact__form">
                 <div>
@@ -54,7 +54,7 @@
                     <mat-form-field style="width: 100%">
                         <mat-label>Mobile Number</mat-label>
                         <ngx-mat-intl-tel-input [preferredCountries]="['in']" [enablePlaceholder]="true"
-                            [enableSearch]="true" name="phone" formControlName="mobile">
+                            [enableSearch]="true" name="phone" formControlName="mobile" [(ngModel)]="mobile_number">
                         </ngx-mat-intl-tel-input>
                     </mat-form-field>
                 </div>
@@ -77,6 +77,6 @@
                 </span>
                 <span>We got your feedback. And it mean so much to us</span>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

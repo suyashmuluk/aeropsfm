@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit {
   contact_form: FormGroup;
   success_message = false;
   loader = false;
+  mobile_number = "";
 
   constructor(private formBuilder: FormBuilder, private contactService: ContactService) { }
 
@@ -45,17 +46,13 @@ export class ContactComponent implements OnInit {
       this.contactService.sendMessage(form_data).subscribe(data => {
         this.loader = false;
         this.contact_form.reset();
+        this.mobile_number = " ";
         this.success_message = true;
         setTimeout(() => {
           this.success_message = false;
         }, 3000);
       });
     }
-    // security token: 40b2fe77-e1f9-420f-b6a8-0a93e1af2498
-    // host: suyash.muluk04@gmail.com
-    // 70542CB3DA17A244117D8E8794823D27C976
-    // smtp.elasticemail.com
-    // 2525
   }
 
 }
