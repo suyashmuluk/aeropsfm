@@ -1,4 +1,4 @@
-@use '../../assets/scss/' as *;
+@use '../scss/' as *;
 
 .contact {
   &__header {
@@ -40,7 +40,7 @@
       padding: 50px 5.9vw;
       flex: 1 0 50%;
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-        url("../../assets/images/contact_us.jpg");
+        url("../../assets/contact_us.jpg");
       background-size: cover;
       color: color(light);
 
