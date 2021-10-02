@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class FooterComponent implements OnInit {
 
   link_items = [
-    { title: 'Home', route: 'home' },
+    { title: 'Home', route: '' },
     { title: 'About', route: 'about' },
     { title: 'Services', route: 'services' },
     { title: 'Contact', route: 'contact' },

@@ -42,7 +42,6 @@
   }
 
   &__title {
-    text-align: center;
     @include fluid-font(
       $min_width,
       $max_width,
@@ -54,7 +53,6 @@
   }
 
   &__info {
-    text-align: center;
     @include fluid-font(
       $min_width,
       $max_width,

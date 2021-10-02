@@ -133,7 +133,7 @@
 
       @include for_size(phone) {
         flex: 1 0 100%;
-        padding-right: 0;
+        padding-left: 0;
       }
 
       &_text {
