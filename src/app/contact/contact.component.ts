@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../shared/contact.service.js';
 
 @Component({
@@ -8,12 +8,12 @@ import { ContactService } from '../shared/contact.service.js';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  contact_form: FormGroup;
+  contact_form: UntypedFormGroup;
   success_message = false;
   loader = false;
   mobile_number = "";
 
-  constructor(private formBuilder: FormBuilder, private contactService: ContactService) { }
+  constructor(private formBuilder: UntypedFormBuilder, private contactService: ContactService) { }
 
   ngOnInit(): void {
     this.initForm();
