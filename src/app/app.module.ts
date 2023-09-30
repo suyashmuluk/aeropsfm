@@ -23,7 +23,7 @@ import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { NgxMatIntlTelInputModule } from 'ngx-mat-intl-tel-input';
+// import { NgxMatIntlTelInputModule } from 'ngx-mat-intl-tel-input';
 
 @NgModule({
   declarations: [
@@ -52,7 +52,7 @@ import { NgxMatIntlTelInputModule } from 'ngx-mat-intl-tel-input';
     MatSnackBarModule,
     MatDialogModule,
     LayoutsModule,
-    NgxMatIntlTelInputModule
+    // NgxMatIntlTelInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

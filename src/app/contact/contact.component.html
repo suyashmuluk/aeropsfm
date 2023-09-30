@@ -53,9 +53,10 @@
                 <div>
                     <mat-form-field style="width: 100%">
                         <mat-label>Mobile Number</mat-label>
-                        <ngx-mat-intl-tel-input [preferredCountries]="['in']" [enablePlaceholder]="true"
+                        <input type="number" matInput formControlName="mobile" [(ngModel)]="mobile_number">
+                        <!-- <ngx-mat-intl-tel-input [preferredCountries]="['in']" [enablePlaceholder]="true"
                             [enableSearch]="true" name="phone" formControlName="mobile" [(ngModel)]="mobile_number">
-                        </ngx-mat-intl-tel-input>
+                        </ngx-mat-intl-tel-input> -->
                     </mat-form-field>
                 </div>
                 <div>
