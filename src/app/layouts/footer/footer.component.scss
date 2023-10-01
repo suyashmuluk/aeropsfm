@@ -7,26 +7,31 @@ ul li {
 .footer {
   background-color: color(dark);
   color: color(light);
-  padding: 2rem 5.9vw;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 24px;
+  padding: 1rem 3vw;
+
+  &__top {
+    border-bottom: 1px solid #999;
+  }
+
+  &__flex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 24px 12px;
+  }
 
   &__title {
     font-family: $chivo;
     @include fluid-font(
       $min_width,
       $max_width,
-      $max_regular_font,
-      $xl_regular_font
+      $min_regular_font,
+      $max_regular_font
     );
     font-weight: bold;
     margin-top: 1rem;
   }
 
   &__media {
-    margin-top: 1rem;
-
     a {
       font-size: 1.5rem;
       color: darkgrey;
@@ -53,17 +58,7 @@ ul li {
       $min_footer_header,
       $max_footer_header
     );
-    margin-bottom: 1rem;
-
-    &::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background-color: color(light);
-    }
+    margin: 1rem 0 .5rem 0;
   }
 
   &__link {
@@ -75,7 +70,6 @@ ul li {
       margin: 0.5rem 0;
       color: color(light);
       font-size: 1rem;
-      font-weight: 600;
       transition: all 0.3s ease-in-out;
 
       &:hover {
@@ -109,12 +103,29 @@ ul li {
   }
 }
 
+.bcas__logo_container {
+  margin-top: 1rem;
+  width: 200px;
+  text-align: center;
+  .bcas__logo {
+    background: url('../../../assets/BCAS_logo.png') no-repeat center/contain;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  .bcas__logo_title {
+    font-weight: bold;
+  }
+}
+
+
 .info {
   background-color: color(dark);
-  color: color(light);
-  padding: 0 2rem;
+  color: #b3b3b3;
+  padding: 1rem 2rem .5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-size: 13px;
 }

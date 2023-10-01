@@ -50,14 +50,14 @@
                         <mat-error>Please enter your email</mat-error>
                     </mat-form-field>
                 </div>
-                <div>
-                    <mat-form-field style="width: 100%">
-                        <mat-label>Mobile Number</mat-label>
-                        <input type="number" matInput formControlName="mobile" [(ngModel)]="mobile_number">
-                        <!-- <ngx-mat-intl-tel-input [preferredCountries]="['in']" [enablePlaceholder]="true"
-                            [enableSearch]="true" name="phone" formControlName="mobile" [(ngModel)]="mobile_number">
-                        </ngx-mat-intl-tel-input> -->
-                    </mat-form-field>
+                <div style="position: relative; margin: 2px 0 16px;">
+                    <ngx-intl-tel-input [cssClass]="'custom'" [enableAutoCountrySelect]="true"
+                        [enablePlaceholder]="true" [searchCountryFlag]="true" [phoneValidation]="true"
+                        [numberFormat]="PhoneNumberFormat.National" formControlName="mobile"
+                        [preferredCountries]="['in']" [enablePlaceholder]="true" [(ngModel)]="mobile_number"
+                        (focusout)="phoneControlValidation()">
+                    </ngx-intl-tel-input>
+                    <div class="mobile_validation_msg">{{number_validation_msg}}</div>
                 </div>
                 <div>
                     <mat-form-field style="width: 100%">

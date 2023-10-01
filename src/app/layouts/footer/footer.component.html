@@ -1,54 +1,67 @@
 <footer>
     <div class="footer">
-        <div>
+        <div class="footer__top">
             <img src="../../../assets/aerops_logo.png" alt="">
-            <div class="footer__title">AEROPS Facility Managment PVT. LTD.</div>
-            <div style="margin-top: 4px; letter-spacing: 1.2px; font-style: italic">
-                We bring the things into existence.
-            </div>
-            <div class="footer__media">
-                <a href="https://www.facebook.com/profile.php?id=100072589331500" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/aeropsfm/?hl=en" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/aerops-facility-management-63661b220/" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-            </div>
         </div>
-        <div>
-            <div class="footer__header">Navigation</div>
-            <ul class="footer__link">
-                <li *ngFor="let item of link_items">
-                    <div class="footer__link_items" (click)="route(item.route)">{{item.title}}</div>
-                </li>
-            </ul>
-        </div>
-        <div>
-            <div class="footer__header">Contact</div>
-            <!-- <div class="footer__contact">
+        <div class="footer__flex">
+            <div>
+                <div class="footer__title">AEROPS Facility Managment PVT. LTD.</div>
+                <div style="margin-top: 4px; letter-spacing: 1.2px; font-style: italic; font-size: 14px;">
+                    We bring the things into existence.
+                </div>
+                <div class="bcas__logo_container">
+                    <div class="bcas__logo"></div>
+                    <div class="bcas__logo_title">BCAS Certified</div>
+                </div>
+            </div>
+            <div>
+                <div class="footer__header">Quick Links</div>
+                <ul class="footer__link">
+                    <li *ngFor="let item of link_items">
+                        <div class="footer__link_items" (click)="route(item.route)">{{item.title}}</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="footer__header">Social Media</div>
+                <div class="footer__media">
+                    <a href="https://www.facebook.com/profile.php?id=100072589331500" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/aeropsfm/?hl=en" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aerops-facility-management-63661b220/" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <div class="footer__header">Contact</div>
+                <!-- <div class="footer__contact">
                 <span class="material-icons">location_on</span>
                 <span class="footer__contact_info">
                     Shree Heights, Raikar Mala, Dhayari, Pune, Maharashtra, India, 411041
                 </span>
             </div> -->
 
-            <div class="footer__contact">
-                <span class="material-icons">mail</span>
-                <span class="footer__contact_info_link">
-                    <a href="mailto:info@aeropsfm.com">info@aeropsfm.com</a>
-                </span>
-            </div>
+                <div class="footer__contact">
+                    <span class="material-icons">mail</span>
+                    <span class="footer__contact_info_link">
+                        <a href="mailto:info@aeropsfm.com">info@aeropsfm.com</a>
+                    </span>
+                </div>
 
-            <div class="footer__contact">
-                <span class="material-icons">call</span>
-                <span class="footer__contact_info_link">
-                    <a href="tel:+91 8888369888">+91 8888369888</a>
-                </span>
+                <div class="footer__contact">
+                    <span class="material-icons">call</span>
+                    <span class="footer__contact_info_link">
+                        <a href="tel:+91 8888369888">+91 8888369888</a>
+                    </span>
+                </div>
             </div>
         </div>
     </div>

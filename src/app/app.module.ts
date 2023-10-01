@@ -23,7 +23,9 @@ import { HomeComponent } from './home/home.component';
 import { ServicesComponent } from './services/services.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-// import { NgxMatIntlTelInputModule } from 'ngx-mat-intl-tel-input';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { OurWorkComponent } from './our-work/our-work.component';
+import { CareerComponent } from './career/career.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { ContactComponent } from './contact/contact.component';
     ServicesComponent,
     AboutComponent,
     ContactComponent,
+    OurWorkComponent,
+    CareerComponent,
   ],
   imports: [
     HttpClientModule,
@@ -52,7 +56,7 @@ import { ContactComponent } from './contact/contact.component';
     MatSnackBarModule,
     MatDialogModule,
     LayoutsModule,
-    // NgxMatIntlTelInputModule
+    NgxIntlTelInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,8 @@ export class NavComponent implements OnInit {
     { title: 'Home', route: 'home' },
     { title: 'About', route: 'about' },
     { title: 'Services', route: 'services' },
+    { title: 'Accomplishment', route: 'our-work' },
+    { title: 'Career', route: 'career' },
     { title: 'Contact', route: 'contact' },
   ];
 

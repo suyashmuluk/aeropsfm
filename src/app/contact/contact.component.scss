@@ -1,14 +1,9 @@
-@use '../scss/' as *;
+@use "../scss/" as *;
 
 .contact {
   &__header {
     text-align: center;
-    @include fluid-font(
-      $min_width,
-      $max_width,
-      $min_title_font,
-      $max_title_font
-    );
+    @include fluid-font($min_width, $max_width, $min_title_font, $max_title_font);
     font-weight: bold;
     text-transform: capitalize;
   }
@@ -19,12 +14,7 @@
     flex-wrap: wrap;
 
     &_title {
-      @include fluid-font(
-        $min_width,
-        $max_width,
-        $min_title_font,
-        $max_title_font
-      );
+      @include fluid-font($min_width, $max_width, $min_title_font, $max_title_font);
       font-weight: 600;
       text-transform: capitalize;
       font-family: $chivo;
@@ -39,8 +29,7 @@
       position: relative;
       padding: 50px 5.9vw;
       flex: 1 0 50%;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-        url("../../assets/contact_us.jpg");
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("../../assets/contact_us.jpg");
       background-size: cover;
       color: color(light);
 
@@ -66,12 +55,7 @@
           }
 
           &_icon {
-            @include fluid-font(
-              $min_width,
-              $max_width,
-              $min_hero_title,
-              $max_hero_title
-            );
+            @include fluid-font($min_width, $max_width, $min_hero_title, $max_hero_title);
           }
 
           &_text {
@@ -151,4 +135,34 @@
 .disabled_btn {
   background-color: #989797 !important;
   pointer-events: none;
+}
+
+.mobile_validation_msg {
+  font-size: 12px;
+  color: #f44336;
+  margin-top: 4px;
+  position: absolute;
+  bottom: -16px;
+}
+
+::ng-deep.iti {
+  position: relative;
+  display: inline-block;
+  width: 100% !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+}
+
+::ng-deep.iti--allow-dropdown input,
+.iti--allow-dropdown input[type="text"],
+.iti--allow-dropdown input[type="tel"],
+.iti--separate-dial-code input,
+.iti--separate-dial-code input[type="text"],
+.iti--separate-dial-code input[type="tel"] {
+  padding-right: 6px;
+  padding-left: 52px;
+  margin-left: 0;
+  border: 0;
+  height: 32px;
+  font-size: 14px;
+  outline: 0;
 }

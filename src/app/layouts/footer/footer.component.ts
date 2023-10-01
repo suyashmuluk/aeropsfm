@@ -12,6 +12,8 @@ export class FooterComponent implements OnInit {
     { title: 'Home', route: '' },
     { title: 'About', route: 'about' },
     { title: 'Services', route: 'services' },
+    { title: 'Accomplishment', route: 'our-work' },
+    { title: 'Career', route: 'career' },
     { title: 'Contact', route: 'contact' },
   ];
 
