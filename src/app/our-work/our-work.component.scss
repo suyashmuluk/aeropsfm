@@ -1,0 +1,132 @@
+@use "../scss/" as *;
+
+.container {
+    padding: 0 5.9vw;
+
+    .success {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(5px, 1fr));
+        grid-column-gap: 48px;
+        place-items: center;
+
+        @include for_size(phone) {
+            grid-gap: 1rem 4px;
+        }
+
+        &__image {
+            grid-column: 1/7;
+
+            @include for_size(phone) {
+                grid-column: 1/-1;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &__para {
+            text-align: justify;
+            grid-column: 7/-1;
+            @include fluid-font($min_width, $max_width, 14px, 20px);
+
+            @include for_size(phone) {
+                grid-column: 1/-1;
+            }
+        }
+    }
+    .projects {
+        padding: 100px 0 50px;
+
+        &__title {
+            @include fluid-font($min_width, $max_width, 24px, 32px);
+            text-align: center;
+            font-family: $chivo;
+            font-weight: bold;
+            margin-bottom: 100px;
+
+            @include for_size(phone) {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__flex {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            column-gap: 2rem;
+            margin-bottom: 75px;
+
+            &_image {
+                img {
+                    width: 400px;
+
+                    @include for_size(phone) {
+                        display: none;
+                    }
+                }
+            }
+
+            &_desc {
+                width: 60%;
+
+                @include for_size(phone) {
+                    width: 100%;
+                }
+
+                &_title {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 8px;
+                    margin-bottom: 1rem;
+
+                    &_text {
+                        @include fluid-font($min_width, $max_width, 16px, 28px);
+                        font-family: $chivo;
+                        font-weight: bold;
+                        color: color(secondary);
+                    }
+
+                    &_point {
+                        position: relative;
+                        height: 24px;
+                        width: 24px;
+                        border-radius: 50%;
+                        border: 1px solid color(secondary);
+
+                        @include for_size(phone) {
+                            display: none;
+                        }
+                        
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            background-color: color(secondary);
+                            height: 12px;
+                            width: 12px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                &_image {
+                    display: none;
+
+                    @include for_size(phone) {
+                        display: block;
+                        width: 100%;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                &_text {
+                    @include fluid-font($min_width, $max_width, 14px, 18px);
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}

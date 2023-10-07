@@ -10,7 +10,7 @@ export class NavComponent implements OnInit {
   close = false;
 
   link_items = [
-    { title: 'Home', route: 'home' },
+    // { title: 'Home', route: 'home' },
     { title: 'About', route: 'about' },
     { title: 'Services', route: 'services' },
     { title: 'Accomplishment', route: 'our-work' },
