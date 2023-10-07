@@ -1,4 +1,4 @@
-@use '../scss/' as *;
+@use "../scss/" as *;
 
 .service {
   padding: 0 5.9vw;
@@ -13,11 +13,10 @@
 
       img {
         width: 100%;
-        filter: drop-shadow(0px 0px 6px black);
-        border-radius: 10px;
       }
 
       @include for_size(phone) {
+        display: none;
         flex: 1 0 100%;
         order: 0;
         margin-bottom: 1rem;
@@ -32,6 +31,15 @@
         order: 1;
       }
 
+      &_image {
+        display: none;
+        
+        @include for_size(phone) {
+          width: 100%;
+          display: block;
+        }
+      }
+
       &_title {
         font-family: $chivo;
         text-align: left;
@@ -41,6 +49,13 @@
 
       &_text {
         margin: 1.5rem 0 0.5rem;
+        line-height: 24px;
+      }
+
+      &_list {
+        &_item {
+          line-height: 24px;
+        }
       }
     }
   }

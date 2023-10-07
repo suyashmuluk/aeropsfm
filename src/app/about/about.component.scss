@@ -39,6 +39,7 @@
         $max_regular_font,
         $xl_regular_font
       );
+      line-height: 24px;
 
       @include for_size(phone) {
         flex: 1 0 100%;
