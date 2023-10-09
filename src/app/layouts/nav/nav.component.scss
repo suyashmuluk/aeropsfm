@@ -42,11 +42,12 @@ ul li {
 
       &:hover {
         cursor: pointer;
-        color: color(primary);
+        color: color(secondary);
       }
 
       &-active {
-        color: color(primary) !important;
+        color: color(secondary) !important;
+        font-weight: bold;
       }
     }
 

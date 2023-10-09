@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../shared/contact.service';
 import { PhoneNumberFormat } from 'ngx-intl-tel-input';
-import { MatLegacySnackBar as MatSnackBar } from '@angular/material/legacy-snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -17,7 +17,7 @@ export class ContactComponent implements OnInit {
   PhoneNumberFormat = PhoneNumberFormat;
   number_validation_msg = ""
 
-  constructor(private formBuilder: UntypedFormBuilder, private contactService: ContactService, private snackbar: MatSnackBar) { }
+  constructor(private formBuilder: FormBuilder, private contactService: ContactService, private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.initForm();
