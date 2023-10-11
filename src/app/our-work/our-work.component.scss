@@ -28,7 +28,8 @@
         &__para {
             text-align: justify;
             grid-column: 7/-1;
-            @include fluid-font($min_width, $max_width, 14px, 20px);
+            @include fluid-font($min_width, $max_width, 14px, 18px);
+            line-height: 24px;
 
             @include for_size(phone) {
                 grid-column: 1/-1;
