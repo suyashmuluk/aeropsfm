@@ -58,17 +58,14 @@
 }
 
 @mixin common_title_style {
-  position: absolute;
-  top: 0;
   font-family: $chivo;
   text-align: left;
   font-weight: bold;
   text-transform: capitalize;
-  margin: 0;
+  margin-bottom: 2rem;
   @include fluid-font($min_width, $max_width, 24px, 36px);
 
   @include for_size(phone) {
-    position: relative;
     margin-bottom: 1rem;
   }
 }
