@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -27,38 +27,31 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { OurWorkComponent } from './our-work/our-work.component';
 import { CareerComponent } from './career/career.component';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ServicesComponent,
-    AboutComponent,
-    ContactComponent,
-    OurWorkComponent,
-    CareerComponent,
-  ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatIconModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatRadioModule,
-    MatCheckboxModule,
-    MatTooltipModule,
-    MatSelectModule,
-    MatSnackBarModule,
-    MatDialogModule,
-    LayoutsModule,
-    NgxIntlTelInputModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        ServicesComponent,
+        AboutComponent,
+        ContactComponent,
+        OurWorkComponent,
+        CareerComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatRadioModule,
+        MatCheckboxModule,
+        MatTooltipModule,
+        MatSelectModule,
+        MatSnackBarModule,
+        MatDialogModule,
+        LayoutsModule,
+        NgxIntlTelInputModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
