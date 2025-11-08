@@ -23,10 +23,6 @@
     "@angular/platform-browser-dynamic": "^19.2.15",
     "@angular/router": "^19.2.15",
     "firebase": "^12.5.0",
-    "google-libphonenumber": "^3.2.33",
-    "intl-tel-input": "^17.0.3",
-    "ngx-intl-tel-input": "^3.2.0",
-    "ngxs-intl-tel-input": "^4.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.15.1"
