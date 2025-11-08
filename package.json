@@ -23,7 +23,6 @@
     "@angular/platform-browser-dynamic": "^20.3.10",
     "@angular/router": "^20.3.10",
     "firebase": "^12.5.0",
-    "ngx-intl-tel-input": "^17.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.15.1"
