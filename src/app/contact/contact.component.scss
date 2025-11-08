@@ -166,3 +166,7 @@
   outline: 0;
   width: 100%;
 }
+
+::ng-deep.iti__country-list {
+  max-height: 200px !important;
+}
