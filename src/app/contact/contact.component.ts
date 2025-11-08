@@ -1,27 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { Component, inject, OnInit, signal } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ContactService } from '../shared/contact.service';
-import { PhoneNumberFormat } from 'ngx-intl-tel-input';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { NgxIntlTelInputModule, PhoneNumberFormat } from 'ngx-intl-tel-input';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { CommonModule } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
-    standalone: false
+    imports: [FormsModule, ReactiveFormsModule, MatFormFieldModule, NgxIntlTelInputModule, CommonModule, MatInputModule, MatSnackBarModule]
 })
 export class ContactComponent implements OnInit {
   contact_form: FormGroup;
-  success_message = false;
-  loader = false;
+  success_message = signal(false);
+  loader = signal(false);
   mobile_number = "";
   PhoneNumberFormat = PhoneNumberFormat;
-  number_validation_msg = ""
-
-  constructor(private formBuilder: FormBuilder, private contactService: ContactService, private snackbar: MatSnackBar) { }
+  number_validation_msg = "";
+  router = inject(Router);
+  formBuilder = inject(FormBuilder);
+  contactService = inject(ContactService);
+  snackbar = inject(MatSnackBar);
 
   ngOnInit(): void {
     this.initForm();
+  }
+
+  routeToHome() {
+    this.router.navigate([""]);
   }
 
   initForm() {
@@ -57,7 +67,7 @@ export class ContactComponent implements OnInit {
   submitForm() {
     if (this.contact_form.invalid) {
       this.snackbar.open('Please fill all required fields', 'OK');
-      return;
+      return false;
     } else {
       let form_data = {
         name: this.contact_form.value.name,
@@ -65,14 +75,14 @@ export class ContactComponent implements OnInit {
         mobile: this.contact_form.value.mobile.number,
         feedback: this.contact_form.value.feedback,
       }
-      this.loader = true;
+      this.loader.set(true);
       this.contactService.sendMessage(form_data).subscribe(data => {
-        this.loader = false;
+        this.loader.set(false);
         this.contact_form.reset();
         this.mobile_number = " ";
-        this.success_message = true;
+        this.success_message.set(true);
         setTimeout(() => {
-          this.success_message = false;
+          this.success_message.set(false);
         }, 3000);
       });
     }

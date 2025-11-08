@@ -11,6 +11,7 @@
   @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
     & {
       font-size: $min-font-size !important;
+
       @media screen and (min-width: $min-vw) {
         font-size: calc(
           #{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} *

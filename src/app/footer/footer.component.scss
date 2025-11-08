@@ -1,4 +1,4 @@
-@use "../../scss/" as *;
+@use "../scss/" as *;
 
 ul li {
   list-style-type: none;
@@ -101,7 +101,7 @@ ul li {
     &_item {
       position: relative;
       &_image {
-        background: url("../../../assets/contact_qr.svg") no-repeat center/cover;
+        background: url("../../assets/contact_qr.svg") no-repeat center/cover;
         height: 150px;
         width: 150px;
       }
@@ -114,7 +114,7 @@ ul li {
   width: 200px;
   text-align: center;
   .bcas__logo {
-    background: url("../../../assets/BCAS_logo.png") no-repeat center/contain;
+    background: url("../../assets/BCAS_logo.png") no-repeat center/contain;
     width: 200px;
     height: 200px;
     border-radius: 50%;

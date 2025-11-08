@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: 'app-services',
-    templateUrl: './services.component.html',
-    styleUrls: ['./services.component.scss'],
-    standalone: false
+  selector: 'app-services',
+  templateUrl: './services.component.html',
+  styleUrls: ['./services.component.scss']
 })
-export class ServicesComponent implements OnInit {
+export class ServicesComponent {
 
-  constructor() { }
+  router = inject(Router);
 
-  ngOnInit(): void {
+  routeToHome() {
+    this.router.navigate([""]);
   }
-
 }

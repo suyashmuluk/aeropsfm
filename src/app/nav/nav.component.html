@@ -1,12 +1,14 @@
 <nav class="navbar">
     <div class="navbar__logo" (click)="route('')"></div>
     <ul class="navbar__link" id="nav_link">
-        <li *ngFor="let item of link_items">
+        @for (item of link_items; track $index) {
+        <li>
             <div class="navbar__link_items" (click)="route(item.route)"
                 [class.navbar__link_items-active]="router.isActive(item.route, false)">
                 {{item.title}}
             </div>
         </li>
+        }
     </ul>
     <span class="material-icons navbar__menu_icon" id="menu_icon" (click)="toggleNavbar()">
         {{close ? 'close' : 'menu'}}

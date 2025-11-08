@@ -17,9 +17,11 @@
             <div>
                 <div class="footer__header">Quick Links</div>
                 <ul class="footer__link">
-                    <li *ngFor="let item of link_items">
+                    @for (item of link_items; track $index) {
+                    <li>
                         <div class="footer__link_items" (click)="route(item.route)">{{item.title}}</div>
                     </li>
+                    }
                 </ul>
             </div>
 
@@ -42,12 +44,6 @@
 
             <div>
                 <div class="footer__header">Contact</div>
-                <!-- <div class="footer__contact">
-                <span class="material-icons">location_on</span>
-                <span class="footer__contact_info">
-                    Shree Heights, Raikar Mala, Dhayari, Pune, Maharashtra, India, 411041
-                </span>
-            </div> -->
                 <div class="footer__Contact_flex">
                     <div class="footer__Contact_flex_item">
                         <div class="footer__contact">

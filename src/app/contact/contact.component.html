@@ -4,7 +4,7 @@
             Contact
         </div>
         <div class="page__header_link">
-            <span class="page__header_link_text" routerLink="/">Home</span>
+            <span class="page__header_link_text" (click)="routeToHome()">Home</span>
             <span class="material-icons page__header_link-icon">chevron_right</span>
             <span class="page__header_link_text">Contact</span>
         </div>
@@ -66,18 +66,22 @@
                         <mat-error>Please give feedback</mat-error>
                     </mat-form-field>
                 </div>
-                <button class="contact__form_btn" (click)="submitForm()" [disabled]="loader"
-                    [ngClass]="loader ? 'disabled_btn' : ''">
-                    <span class="contact__form_btn_text">{{loader ? 'Sending..' : 'Send'}}</span>
-                    <span class="material-icons contact__form_btn-icon" *ngIf="!loader">send</span>
+                <button class="contact__form_btn" (click)="submitForm()" [disabled]="loader()"
+                    [ngClass]="loader() ? 'disabled_btn' : ''">
+                    <span class="contact__form_btn_text">{{loader() ? 'Sending..' : 'Send'}}</span>
+                    @if (!loader()) {
+                        <span class="material-icons contact__form_btn-icon">send</span>
+                    }
                 </button>
             </form>
-            <div class="contact__flex_form__success_message" *ngIf="success_message">
-                <span class="material-icons">
-                    check_circle
-                </span>
-                <span>We got your feedback. And it mean so much to us</span>
-            </div>
+            @if (success_message()) {
+                <div class="contact__flex_form__success_message">
+                    <span class="material-icons">
+                        check_circle
+                    </span>
+                    <span>We got your feedback. And it mean so much to us</span>
+                </div>
+            }
         </div>
     </div>
 </div>

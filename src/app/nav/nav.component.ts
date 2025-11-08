@@ -1,13 +1,12 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-nav',
     templateUrl: './nav.component.html',
-    styleUrls: ['./nav.component.scss'],
-    standalone: false
+    styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit {
+export class NavComponent {
   close = false;
 
   link_items = [
@@ -19,10 +18,7 @@ export class NavComponent implements OnInit {
     { title: 'Career', route: 'career' },
   ];
 
-  constructor(public router: Router) { }
-
-  ngOnInit(): void {
-  }
+  router = inject(Router);
 
   route(value) {
     this.router.navigate([value]);

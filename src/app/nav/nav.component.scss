@@ -1,4 +1,4 @@
-@use '../../scss/' as *;
+@use '../scss/' as *;
 
 ul li {
   list-style-type: none;
@@ -19,7 +19,7 @@ ul li {
   z-index: 2;
 
   &__logo {
-    background-image: url("../../../assets/aerops_logo.png");
+    background-image: url("../../assets/aerops_logo.png");
     background-size: cover;
     width: 200px;
     height: 60px;
