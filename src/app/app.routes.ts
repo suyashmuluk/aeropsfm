@@ -1,14 +1,15 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 
 export const routes: Routes = [
     {
         path: '',
         pathMatch: 'full',
-        loadComponent: () => import("./home/home.component").then(m => m.HomeComponent)
+        component: HomeComponent
     },
     {
         path: 'home',
-        loadComponent: () => import("./home/home.component").then(m => m.HomeComponent)
+        component: HomeComponent
     },
     {
         path: 'services',
@@ -23,11 +24,15 @@ export const routes: Routes = [
         loadComponent: () => import("./contact/contact.component").then(m => m.ContactComponent)
     },
     {
-        path: 'our-work',
+        path: 'accomplishment',
         loadComponent: () => import("./our-work/our-work.component").then(m => m.OurWorkComponent)
     },
     {
         path: 'career',
         loadComponent: () => import("./career/career.component").then(m => m.CareerComponent)
     },
+    {
+        path: 'certifications',
+        loadComponent: () => import("./certifications/certifications.component").then(m => m.CertificationsComponent)
+    }
 ];

@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { LINK_ITEMS } from 'src/constants/shared.constant';
 
 @Component({
     selector: 'app-nav',
@@ -8,16 +9,7 @@ import { Router } from '@angular/router';
 })
 export class NavComponent {
   close = false;
-
-  link_items = [
-    // { title: 'Home', route: 'home' },
-    { title: 'About', route: 'about' },
-    { title: 'Services', route: 'services' },
-    { title: 'Accomplishment', route: 'our-work' },
-    { title: 'Contact', route: 'contact' },
-    { title: 'Career', route: 'career' },
-  ];
-
+  link_items = LINK_ITEMS;
   router = inject(Router);
 
   route(value) {

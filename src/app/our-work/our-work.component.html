@@ -1,12 +1,12 @@
 <div class="main_content_position">
     <div class="page__header">
         <div class="page__header_title">
-            Accomplishments
+            Accomplishment
         </div>
         <div class="page__header_link">
             <span class="page__header_link_text" (click)="routeToHome()">Home</span>
-            <span class="material-icons page__header_link-icon">chevron_right</span>
-            <span class="page__header_link_text">Accomplishments</span>
+            <span class="material-icons-outlined page__header_link-icon">chevron_right</span>
+            <span class="page__header_link_text">Accomplishment</span>
         </div>
     </div>
     <div class="container">
@@ -35,78 +35,246 @@
         <div class="projects">
             <div class="projects__title">Airborne Achievements: Our Airport Projects</div>
 
-            <div class="projects__flex">
-                <div class="projects__flex_image">
-                    <img src="../../assets/motors.jpg" alt="Cable Dressing">
-                </div>
-                <div class="projects__flex_desc">
-                    <div class="projects__flex_desc_title">
-                        <div class="projects__flex_desc_title_point"></div>
-                        <div class="projects__flex_desc_title_text">
-                            MOPA Airport, Goa
+            <mat-tab-group animationDuration="1000ms" mat-stretch-tabs="false" mat-align-tabs="center">
+                <mat-tab label="Completed Projects">
+                    <div class="projects__flex">
+                        <div class="projects__flex_image">
+                            <img src="../../assets/motors.jpg" alt="Cable Dressing">
+                        </div>
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    MOPA Airport, Goa
+                                </div>
+                            </div>
+                            <img src="../../assets/motors.jpg" class="projects__flex_desc_image" alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                When it comes to managing airports, we're really good at setting up the electrical stuff
+                                for the
+                                conveyor belts that handle your luggage. It's like making sure your luggage moves
+                                smoothly from
+                                one place to another.
+                                <br><br>
+                                Our team has consistently demonstrated precision and proficiency in executing these
+                                crucial
+                                projects.
+                            </div>
                         </div>
                     </div>
-                    <img src="../../assets/motors.jpg" class="projects__flex_desc_image" alt="Cable Dressing">
-                    <div class="projects__flex_desc_text">
-                        When it comes to managing airports, we're really good at setting up the electrical stuff for the
-                        conveyor belts that handle your luggage. It's like making sure your luggage moves smoothly from
-                        one place to another.
-                        <br><br>
-                        Our team has consistently demonstrated precision and proficiency in executing these crucial
-                        projects.
-                    </div>
-                </div>
-            </div>
 
-            <div class="projects__flex">
-                <div class="projects__flex_desc">
-                    <div class="projects__flex_desc_title">
-                        <div class="projects__flex_desc_title_point"></div>
-                        <div class="projects__flex_desc_title_text">
-                            Sardar Vallabhbhai Patel International Airport (Terminal 1),
-                            Gujarat
+                    <div class="projects__flex">
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Sardar Vallabhbhai Patel International Airport (Terminal 1),
+                                    Gujarat
+                                </div>
+                            </div>
+                            <img src="../../assets/cable_dressing.jpg" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                We're careful planners, making sure everything is wired up just right and works
+                                perfectly. This
+                                is super important for the airport to run well and ensure your bags get where they need
+                                to be
+                                without a hitch.
+                                <br><br>
+                                From meticulously planning the layout to expertly wiring and integrating electronic
+                                components,
+                                our approach ensures that every part of the system operates in harmony.
+                            </div>
+                        </div>
+                        <div class="projects__flex_image">
+                            <img src="../../assets/cable_dressing.jpg" alt="Cable Dressing">
                         </div>
                     </div>
-                    <img src="../../assets/cable_dressing.jpg" class="projects__flex_desc_image" alt="Cable Dressing">
-                    <div class="projects__flex_desc_text">
-                        We're careful planners, making sure everything is wired up just right and works perfectly. This
-                        is super important for the airport to run well and ensure your bags get where they need to be
-                        without a hitch.
-                        <br><br>
-                        From meticulously planning the layout to expertly wiring and integrating electronic components,
-                        our approach ensures that every part of the system operates in harmony.
-                    </div>
-                </div>
-                <div class="projects__flex_image">
-                    <img src="../../assets/cable_dressing.jpg" alt="Cable Dressing">
-                </div>
-            </div>
 
-            <div class="projects__flex">
-                <div class="projects__flex_image">
-                    <img src="../../assets/cable_tray.jpg" alt="Cable Dressing">
-                </div>
-                <div class="projects__flex_desc">
-                    <div class="projects__flex_desc_title">
-                        <div class="projects__flex_desc_title_point"></div>
-                        <div class="projects__flex_desc_title_text">
-                            Sardar Vallabhbhai Patel International Airport (Terminal 2),
-                            Gujarat
+                    <div class="projects__flex">
+                        <div class="projects__flex_image">
+                            <img src="../../assets/cable_tray.jpg" alt="Cable Dressing">
+                        </div>
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Sardar Vallabhbhai Patel International Airport (Terminal 2),
+                                    Gujarat
+                                </div>
+                            </div>
+                            <img src="../../assets/cable_tray.jpg" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                Imagine your luggage effortlessly gliding from check-in to the plane, and that's where
+                                we come
+                                in. We specialize in making sure the electrical parts of those conveyor belts and
+                                systems that
+                                handle your bags are top-notch.
+                                <br><br>
+                                We prioritize safety, reliability, and optimal functionality, guaranteeing that the
+                                baggage
+                                handling system operates at its best, contributing to the smooth flow of operations
+                                within the
+                                airport. Our successful track record in this domain is a testament to our dedication to
+                                excellence in airport facility management.
+                            </div>
                         </div>
                     </div>
-                    <img src="../../assets/cable_tray.jpg" class="projects__flex_desc_image" alt="Cable Dressing">
-                    <div class="projects__flex_desc_text">
-                        Imagine your luggage effortlessly gliding from check-in to the plane, and that's where we come
-                        in. We specialize in making sure the electrical parts of those conveyor belts and systems that
-                        handle your bags are top-notch.
-                        <br><br>
-                        We prioritize safety, reliability, and optimal functionality, guaranteeing that the baggage
-                        handling system operates at its best, contributing to the smooth flow of operations within the
-                        airport. Our successful track record in this domain is a testament to our dedication to
-                        excellence in airport facility management.
+
+                    <div class="projects__flex">
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Delhi T1 (IGI) Airport
+                                </div>
+                            </div>
+                            <img src="../../assets/delhi-t1.webp" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                We successfully delivered the complete electrical installation for the Terminal 1
+                                Baggage Handling System at Delhi's Indira Gandhi International Airport. Our work ensured
+                                the seamless integration of power, controls, and sensing networks, enhancing baggage
+                                efficiency for one of the nation's busiest aviation hubs.
+                            </div>
+                        </div>
+                        <div class="projects__flex_image">
+                            <img src="../../assets/delhi-t1.webp" alt="Cable Dressing">
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                    <div class="projects__flex">
+                        <div class="projects__flex_image">
+                            <img src="../../assets/mumbai-t1.jpg" alt="Cable Dressing">
+                        </div>
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Mumbai T1 (CSMIA) Airport
+                                </div>
+                            </div>
+                            <img src="../../assets/mumbai-t1.jpg" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                Our expertise was pivotal in executing the electrical installation for the Baggage
+                                Handling System at Mumbai's Chhatrapati Shivaji Maharaj International Airport, Terminal
+                                1. The project was completed to the highest standards, directly contributing to reliable
+                                and swift passenger baggage processing.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__flex">
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Mumbai T2 (CSMIA) Enhancement Project
+                                </div>
+                            </div>
+                            <img src="../../assets/mumbai-t2.jpg" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                We were entrusted with the critical enhancement and modernization and upgradation of the
+                                Baggage Handling System electrical infrastructure at Mumbai Airport's Terminal 2. This
+                                project involved upgrading control systems and power distribution to increase capacity,
+                                improve reliability, and integrate next-generation technology for the international
+                                terminal.
+                            </div>
+                        </div>
+                        <div class="projects__flex_image">
+                            <img src="../../assets/mumbai-t2.jpg" alt="Cable Dressing">
+                        </div>
+                    </div>
+                </mat-tab>
+
+                <mat-tab label="Ongoing Projects">
+                    <div class="projects__flex">
+                        <div class="projects__flex_image">
+                            <img src="../../assets/delhi-jewar.jpg" alt="Cable Dressing">
+                        </div>
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Delhi Jewar International Airport
+                                </div>
+                            </div>
+                            <img src="../../assets/delhi-jewar.jpg" class="projects__flex_desc_image" alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                We are proud to be a part of building India's future aviation infrastructure, currently
+                                delivering the electrical installation for the Baggage Handling System at the new
+                                greenfield Noida International Airport (Jewar).
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__flex">
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Guwahati Airport
+                                </div>
+                            </div>
+                            <img src="../../assets/guwahati-airport.jpg" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                Our team is actively enhancing regional connectivity through the electrical installation
+                                of the new Baggage Handling System at Guwahati Airport, strengthening the gateway to
+                                Northeast India.
+                            </div>
+                        </div>
+                        <div class="projects__flex_image">
+                            <img src="../../assets/guwahati-airport.jpg" alt="Cable Dressing">
+                        </div>
+                    </div>
+
+                    <div class="projects__flex">
+                        <div class="projects__flex_image">
+                            <img src="../../assets/bhogapuram-airport.jpg" alt="Cable Dressing">
+                        </div>
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Bhogapuram Airport
+                                </div>
+                            </div>
+                            <img src="../../assets/bhogapuram-airport.jpg" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                We are providing the complete electrical installation for the Baggage Handling System at
+                                the new greenfield Bhogapuram International Airport, supporting the development of a key
+                                aviation node on the east coast.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projects__flex">
+                        <div class="projects__flex_desc">
+                            <div class="projects__flex_desc_title">
+                                <div class="projects__flex_desc_title_point"></div>
+                                <div class="projects__flex_desc_title_text">
+                                    Bangalore (KIA) Airport
+                                </div>
+                            </div>
+                            <img src="../../assets/banglore-airport.jpg" class="projects__flex_desc_image"
+                                alt="Cable Dressing">
+                            <div class="projects__flex_desc_text">
+                                We are currently engaged in the upgrade and expansion of the Baggage Handling System's
+                                electrical installation at Bangalore's Kempegowda International Airport, helping to
+                                manage growing passenger traffic with improved efficiency.
+                            </div>
+                        </div>
+                        <div class="projects__flex_image">
+                            <img src="../../assets/banglore-airport.jpg" alt="Cable Dressing">
+                        </div>
+                    </div>
+                </mat-tab>
+            </mat-tab-group>
         </div>
     </div>
 </div>

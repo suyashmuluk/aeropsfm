@@ -56,7 +56,7 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 1rem 2rem;
-            margin-bottom: 75px;
+            margin: 75px 0;
 
             &_image {
                 img {
@@ -130,6 +130,14 @@
             }
         }
     }
+}
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+::ng-deep.mdc-tab__text-label {
+    font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 991px) and (min-width: 320px) {

@@ -1,4 +1,8 @@
-@use '../scss/' as *;
+@use "../scss/" as *;
+
+.mt-2 {
+  margin-top: 8px;
+}
 
 .page__header {
   margin-bottom: 0;
@@ -6,6 +10,10 @@
 
 .about {
   padding: 0 5.9vw 50px;
+
+  .about__info {
+    text-align: justify;
+  }
 
   &__flex {
     display: flex;
@@ -24,7 +32,7 @@
         margin-bottom: 1rem;
       }
 
-      img{
+      img {
         @include for_size(phone) {
           width: 100%;
         }
@@ -33,12 +41,7 @@
 
     &_info {
       flex: 1 0 50%;
-      @include fluid-font(
-        $min_width,
-        $max_width,
-        $max_regular_font,
-        $xl_regular_font
-      );
+      @include fluid-font($min_width, $max_width, $max_regular_font, $xl_regular_font);
       line-height: 24px;
 
       @include for_size(phone) {
@@ -51,12 +54,7 @@
     display: flex;
     align-items: center;
     column-gap: 1rem;
-    @include fluid-font(
-      $min_width,
-      $max_width,
-      $min_title_font,
-      $max_title_font
-    );
+    @include fluid-font($min_width, $max_width, $min_title_font, $max_title_font);
     font-weight: 600;
     margin: 50px 0 1rem;
     line-height: 40px;
@@ -67,12 +65,7 @@
   }
 
   &__info {
-    @include fluid-font(
-      $min_width,
-      $max_width,
-      $max_regular_font,
-      $xl_regular_font
-    );
+    @include fluid-font($min_width, $max_width, $max_regular_font, $xl_regular_font);
     line-height: 24px;
   }
 }

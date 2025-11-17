@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { LINK_ITEMS } from 'src/constants/shared.constant';
 
 @Component({
     selector: 'app-footer',
@@ -8,13 +9,7 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
 
-  link_items = [
-    { title: 'About', route: 'about' },
-    { title: 'Services', route: 'services' },
-    { title: 'Accomplishment', route: 'our-work' },
-    { title: 'Contact', route: 'contact' },
-    { title: 'Career', route: 'career' },
-  ];
+  link_items = LINK_ITEMS;
 
   router = inject(Router);
 

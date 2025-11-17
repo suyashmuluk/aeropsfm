@@ -1,0 +1,85 @@
+@use "../scss/" as *;
+
+.section {
+    padding: 50px 5.9vw;
+}
+
+.container {
+    text-align: center;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 4px;
+        margin-bottom: 0.5rem;
+
+        &-icon {
+            color: color(primary);
+            @include fluid-font($min_width, $max_width, 18px, 40px);
+        }
+
+        &_text {
+            font-weight: 600;
+            @include fluid-font($min_width, $max_width, 24px, 32px);
+        }
+    }
+
+    .subheader {
+        color: #727272;
+        @include fluid-font($min_width, $max_width, 14px, 18px);
+    }
+}
+
+.card__grid {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    &_item {
+        border-radius: 40px;
+        padding: 3rem;
+        box-shadow: 4px 12px 24px 0px #e9e9e9;
+        transition: transform 0.8s ease-in-out;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &:first-child {
+            &:hover {
+                outline: 2px solid #096aca;
+            }
+        }
+
+        &:nth-child(2) {
+            &:hover {
+                outline: 2px solid #12c908;
+            }
+        }
+
+        &:last-child {
+            &:hover {
+                outline: 2px solid #289448;
+            }
+        }
+
+        &_image {
+            width: 200px;
+            @include for_size("phone") {
+                width: 140px;
+            }
+        }
+    }
+}
+
+.certification-details {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgb(149 149 149 / 20%);
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}

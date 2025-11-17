@@ -45,7 +45,7 @@ button:hover {
 
 .page__header {
   position: relative;
-  padding: 6rem 2rem;
+  padding: 12rem 2rem;
   background-color: color(secondary);
   margin-bottom: 5rem;
 
@@ -54,6 +54,7 @@ button:hover {
     color: color(light);
     font-weight: bold;
     text-align: center;
+
     @include fluid-font(
       $min_width,
       $max_width,
