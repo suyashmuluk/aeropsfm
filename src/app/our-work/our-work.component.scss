@@ -137,11 +137,17 @@
 }
 
 ::ng-deep.mdc-tab__text-label {
-    font-size: 1.5rem;
+    @include fluid-font($min_width, $max_width, 14px, 24px);
 }
+
+
 
 @media only screen and (max-width: 991px) and (min-width: 320px) {
     .projects__flex_desc {
         width: 100% !important;
+    }
+
+    ::ng-deep.mdc-tab {
+        padding: 0 .5rem;
     }
 }

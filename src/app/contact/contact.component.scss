@@ -126,6 +126,14 @@
       }
     }
   }
+
+  &__map {
+    margin-bottom: 3rem;
+    
+    &_header {
+      margin: 5rem 0;
+    }
+  }
 }
 
 .disabled_btn {

@@ -20,13 +20,13 @@
             <div class="contact__flex_subtitle">Get in touch with us</div>
             <div class="contact__flex_map_info">
                 <div class="contact__flex_map_info_section">
-                    <span class="material-icons contact__flex_map_info_section_icon">mail</span>
+                    <span class="material-icons-outlined contact__flex_map_info_section_icon">mail</span>
                     <div class="contact__flex_map_info_section_text">
                         <a href="mailto:info@aeropsfm.com">info&#64;aeropsfm.com</a>
                     </div>
                 </div>
                 <div class="contact__flex_map_info_section">
-                    <span class="material-icons contact__flex_map_info_section_icon">call</span>
+                    <span class="material-icons-outlined contact__flex_map_info_section_icon">call</span>
                     <div class="contact__flex_map_info_section_text">
                         <a href="tel:+91 8888369888">+91 8888369888</a>
                     </div>
@@ -70,18 +70,32 @@
                     [ngClass]="loader() ? 'disabled_btn' : ''">
                     <span class="contact__form_btn_text">{{loader() ? 'Sending..' : 'Send'}}</span>
                     @if (!loader()) {
-                        <span class="material-icons contact__form_btn-icon">send</span>
+                    <span class="material-icons-outlined contact__form_btn-icon">send</span>
                     }
                 </button>
             </form>
             @if (success_message()) {
-                <div class="contact__flex_form__success_message">
-                    <span class="material-icons">
-                        check_circle
-                    </span>
-                    <span>We got your feedback. And it mean so much to us</span>
-                </div>
+            <div class="contact__flex_form__success_message">
+                <span class="material-icons-outlined">
+                    check_circle
+                </span>
+                <span>We got your feedback. And it mean so much to us</span>
+            </div>
             }
         </div>
+    </div>
+
+    <div class="contact__map">
+        <div class="contact__header contact__map_header">
+            Our Office
+        </div>
+        <div class="contact__map_container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4655.5397626163185!2d73.84873717592713!3d18.504036869677698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c00d0524c631%3A0x7b369ec8519baa16!2sSataygiri%20Apartment!5e1!3m2!1sen!2sin!4v1763478862360!5m2!1sen!2sin"
+                height="600" style="border:0; width: 100dvw;" allowfullscreen="" loading="lazy" title="Office Location"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
     </div>
 </div>
