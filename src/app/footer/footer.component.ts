@@ -10,6 +10,7 @@ import { LINK_ITEMS } from 'src/constants/shared.constant';
 export class FooterComponent {
 
   link_items = LINK_ITEMS;
+  currentYear = new Date().getFullYear();
 
   router = inject(Router);
 
