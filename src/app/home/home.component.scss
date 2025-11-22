@@ -1,11 +1,12 @@
 @use "../scss/" as *;
 
 .hero_image {
+  // background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0)),  url("../../assets/hero.jpeg");
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../assets/hero.jpeg");
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: calc(100vh - 76px);
+  height: calc(90vh - 76px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,6 +30,12 @@
 
   &_subtitle {
     font-size: 1.5rem;
+  }
+
+  &_subheading {
+    @include fluid-font($min_width, $max_width, 16px, 20px);
+    margin-top: 1rem;
+    font-weight: 400;
   }
 
   &_btn {

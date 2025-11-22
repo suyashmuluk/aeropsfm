@@ -34,5 +34,9 @@ export const routes: Routes = [
     {
         path: 'certifications',
         loadComponent: () => import("./certifications/certifications.component").then(m => m.CertificationsComponent)
+    },
+    {
+        path: '**',
+        loadComponent: () => import("./not-found/not-found.component").then(m => m.NotFoundComponent)
     }
 ];
